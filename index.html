@@ -107,6 +107,115 @@
     margin-top: 14px;
     font-weight: bold;
   }
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>🛒 طلبية ملابس</title>
+<style>
+  body {
+    font-family: "Cairo", sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,#eef2f7,#dbeafe);
+    color: #2c3e50;
+  }
+
+  /* 🔹 ألبوم الصور (سلايدر بسيط) */
+  .slideshow {
+    width: 98%;
+    max-width: 700px;
+    margin: 24px auto 6px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    background: #fff;
+  }
+  .slideshow .slide {
+    width: 98%;
+    display: none;
+    border-radius: 14px;
+  }
+  .slideshow .slide.active {
+    display: block;
+    animation: fade 0.9s ease-in-out;
+  }
+  @keyframes fade {
+    from { opacity: 0.4; transform: scale(1.01); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* 📋 الفورم */
+  form {
+    max-width: 700px;
+    margin: 18px auto 40px;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  h2 {
+    text-align: center;
+    color: #2563eb;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #344;
+  }
+  input, select {
+    width: 98%;
+    padding: 10px;
+    margin-top: 6px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+    box-sizing: border-box;
+  }
+  input:focus, select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 6px rgba(37,99,235,0.18);
+    outline: none;
+  }
+  button {
+    margin-top: 18px;
+    width: 98%;
+    padding: 8px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  button:hover { background: #1e40af; }
+
+  .piece {
+    border: 2px dashed #2563eb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background: #f0f9ff;
+  }
+
+  .piece img { 
+    max-width:240px;
+    display:block; 
+    margin:8px auto; 
+    border-radius:10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  #priceDetails {
+    margin-top: 14px;
+    font-weight: bold;
+  }
 
   /* نافذة النجاح */
   #successModal {
@@ -146,12 +255,11 @@
 
   <!-- 🔹 السلايدر (ألبوم الصور) -->
   <div class="slideshow" aria-hidden="false">
-    <!-- الصور سيتم تعبئتها بواسطة الجافاسكربت أو يمكنك وضع img ثابت هنا -->
-    <img class="slide active" src="images/modal1.jpg" alt="مودال 1" onerror="this.onerror=null;this.src=this.src.replace('/images/','/image/');">
-    <img class="slide" src="images/modal2.jpg" alt="مودال 2" onerror="this.onerror=null;this.src=this.src.replace('/images/','/image/');">
-    <img class="slide" src="images/modal3.jpg" alt="مودال 3" onerror="this.onerror=null;this.src=this.src.replace('/images/','/image/');">
-    <img class="slide" src="images/modal4.jpg" alt="مودال 4" onerror="this.onerror=null;this.src=this.src.replace('/images/','/image/');">
-    <img class="slide" src="images/modal5.jpg" alt="مودال 5" onerror="this.onerror=null;this.src=this.src.replace('/images/','/image/');">
+    <img class="slide active" src="images/modal1.jpg" alt="مودال 1">
+    <img class="slide" src="images/modal2.jpg" alt="مودال 2">
+    <img class="slide" src="images/modal3.jpg" alt="مودال 3">
+    <img class="slide" src="images/modal4.jpg" alt="مودال 4">
+    <img class="slide" src="images/modal5.jpg" alt="مودال 5">
   </div>
 
   <h2>🛒 طلبية ملابس أطفال</h2>
