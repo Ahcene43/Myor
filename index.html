@@ -380,15 +380,15 @@ function updateSize(select,id){
 }
 
 // عرض صورة المودال داخل القطعة عند اختيار المودال
-function showModalImage(select, id) {
-  const imgDiv = document.getElementById(`modalImage${id}`);
+function showmodalimages(select, id) {
+  const imgDiv = document.getElementById(`modalimages${id}`);
   const value = select.value;
   if (!value) {
     imgDiv.innerHTML = "";
     return;
   }
 
-  const modalImages = {
+  const modalimages = {
     "1": "images/modal1.jpg",
     "2": "images/modal2.jpg",
     "3": "images/modal3.jpg",
@@ -398,7 +398,7 @@ function showModalImage(select, id) {
 
   // حاول تحميل من images/، وإذا فشل (onerror) يحول إلى image/
   const img = document.createElement("img");
-  img.src = modalImages[value];
+  img.src = modalimages[value];
   img.alt = `مودال ${value}`;
   img.style.maxWidth = "220px";
   img.onerror = function(){
